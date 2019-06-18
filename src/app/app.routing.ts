@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { MusicComponent } from './music/music.component';
 import { MusicPostComponent } from './music-post/music-post.component';
+import { AdminComponent } from './admin/admin.component';
 
 const appRoutes: Routes = [
 {
@@ -16,6 +17,10 @@ const appRoutes: Routes = [
 {
   path: 'posts/:id',
   component: MusicPostComponent
+},
+{
+  path: 'admin',
+  component: AdminComponent
 }
 ];
 

@@ -1,0 +1,13 @@
+{ "posts": [{
+  "title": "Song of the Week",
+  "author": "sangel217",
+  "date": "04-02-19",
+  "content": "blah blah song of the week",
+  "id": "1"
+  }, {
+    "title": "New Album Release",
+    "author": "kevman",
+    "date": "blah blah Album of the week",
+    "id": "2"
+  }]
+}

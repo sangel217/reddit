@@ -3,6 +3,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Post } from '../post.model';
 import { PostService } from '../post.service';
+import { FirebaseObjectObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-music-post',
@@ -11,8 +12,8 @@ import { PostService } from '../post.service';
   providers: [PostService]
 })
 export class MusicPostComponent implements OnInit {
-  postId: number;
-  postToDisplay: Post;
+  postId: string;
+  postToDisplay;
 
   constructor(
     private route: ActivatedRoute,
@@ -22,7 +23,7 @@ export class MusicPostComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
-      this.postId = parseInt(urlParameters['id']);
+      this.postId = urlParameters['id'];
     });
     this.postToDisplay = this.postService.getPostById(this.postId);
   }
